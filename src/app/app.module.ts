@@ -10,6 +10,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardCardComponent } from './components/dashboard-card/dashboard-card.component'
 import { GoogleChartsModule } from 'angular-google-charts';
 import { GithubdemoComponent } from './components/githubdemo/githubdemo.component';
+
+import { NewsComponent } from './components/news/news.component';
+import { NewsapiService } from 'src/app/newsapi.service';
+
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,16 +24,24 @@ import { GithubdemoComponent } from './components/githubdemo/githubdemo.componen
     HomeComponent,
     CountriesComponent,
     DashboardCardComponent,
-    GithubdemoComponent
+    GithubdemoComponent,
+    NewsComponent,
+    
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    GoogleChartsModule
+    GoogleChartsModule,
+    LoadingBarHttpClientModule,
+    NgxPaginationModule,
+    
+    
+    
 
   ],
-  providers: [],
+  providers: [NewsapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

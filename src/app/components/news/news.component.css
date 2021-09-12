@@ -1,0 +1,17 @@
+.box
+{
+    padding: 10px 10px;
+    background-color: rgb(240, 240, 240);
+    
+}
+
+.box h5
+{
+font-size: 18px;
+font-weight: bold;
+}
+
+.box a
+{
+    text-align: center;
+}

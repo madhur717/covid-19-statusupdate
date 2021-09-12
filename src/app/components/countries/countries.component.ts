@@ -30,6 +30,9 @@ export class CountriesComponent implements OnInit {
   }
  
   constructor(private service : DataServiceService) { }
+// for pagination
+  totalLength:any;
+  page:number = 1;
 
   ngOnInit(): void {
 
@@ -48,6 +51,8 @@ export class CountriesComponent implements OnInit {
     ).subscribe(
       {
         complete : ()=>{
+          // this is for pagination
+          // this.totalLength = result.length;
          this.updateValues('India')
          this.loading = false;
         }
@@ -82,7 +87,7 @@ export class CountriesComponent implements OnInit {
     this.selectedCountryData  = this.dateWiseData[country]
     // console.log(this.selectedCountryData);
     this.updateChart();
-    
+     
   }
 
 }
