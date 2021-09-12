@@ -16,6 +16,7 @@ import { NewsapiService } from 'src/app/newsapi.service';
 
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     DashboardCardComponent,
     GithubdemoComponent,
     NewsComponent,
+    AboutComponent,
     
   ],
   
